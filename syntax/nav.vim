@@ -66,7 +66,7 @@ syn keyword navOptions          BufSelActive BufSelInactive ComplSelected
                               \ BufText BufDir BufSz OverlaySep
                               \ OverlayLine OverlayBufNo OverlayInactiveBufNo
                               \ OverlayActive OverlayArgs OverlayInactive
-                              \ OverlayTextInactive ComplText
+                              \ OverlayTextInactive OverlayProgress ComplText
                               \ MsgError MsgMessage MsgAsk
 
 syn cluster navSubst            contains=navSubst,navOldSubst,navMathSubst
