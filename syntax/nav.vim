@@ -26,7 +26,7 @@ syn match navNumber             "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-
 syn match navFloat              "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
 syn match navVariable           /\w\+=/                 display
 syn match navExpansion          /\${\=\w\+}\=/          display
-syn match navFieldVar           /%:{\=\w\+}\=/          display
+syn match navFieldVar           /%{\=\w\+}\=/          display
 
 syn keyword navTodo             contained FIXME TODO XXX
 
@@ -58,7 +58,7 @@ syn keyword navCommands         new fu function version ver qa close q autocmd
                               \ au buffer bu bdelete bd new vnew vne sort sor
                               \ cd mark delm echo ec reload rel pipe kill
                               \ highlight hi syn let map op source so
-                              \ return ret
+                              \ return ret direct edit
 
 syn keyword navStatement        let local set
 
