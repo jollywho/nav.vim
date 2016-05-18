@@ -24,14 +24,14 @@ syn case match
 
 syn match navNumber             "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-7]\+\>"
 syn match navFloat              "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
-syn match navVariable           /\w\+=/                 display
-syn match navExpansion          /\${\=\w\+}\=/          display
-syn match navFieldVar           /%{\=\w\+}\=/          display
+syn match navVariable           /\w\+=/         display
+syn match navExpansion          /\${\=\w\+}\=/  display
+syn match navFieldVar           /%{\=\w\+}\=/   display
 
 syn keyword navTodo             contained FIXME TODO XXX
 
 syn region  navComment          oneline start='\%(^\|\s*\)#' end='$'
-                              \ contains=navTodo,@Spell
+                              \ contains=navTodo
 
 syn match   navPreProc          '^\%1l#\%(!\|compdef\|autoload\).*$'
 
@@ -54,11 +54,12 @@ syn match navFunction           "\<\h\w*\>\(\s\|\n\)*("me=e-1
 
 syn match navOperator           '||\|&&\|;\|&!\='
 
-syn keyword navCommands         new fu function version ver qa close q autocmd
-                              \ au buffer bu bdelete bd new vnew vne sort sor
-                              \ cd mark delm echo ec reload rel pipe kill
-                              \ highlight hi syn let map op source so
-                              \ return ret direct edit
+syn keyword navCommands       \ augroup aug autocmd au bdelete bd buffer bu cd
+                                close q delmark delm direct di echo ec edit ed
+                                filter fil function
+                                fu highlight hi kill local map mark
+                                m new op qa reload rel return ret sort sor
+                                source so syntax syn version ver vnew vne
 
 syn keyword navStatement        let local set
 
