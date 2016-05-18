@@ -54,12 +54,12 @@ syn match navFunction           "\<\h\w*\>\(\s\|\n\)*("me=e-1
 
 syn match navOperator           '||\|&&\|;\|&!\='
 
-syn keyword navCommands       \ augroup aug autocmd au bdelete bd buffer bu cd
-                                close q delmark delm direct di echo ec edit ed
-                                filter fil function
-                                fu highlight hi kill local map mark
-                                m new op qa reload rel return ret sort sor
-                                source so syntax syn version ver vnew vne
+syn keyword navCommands         augroup aug autocmd au bdelete bd buffer bu cd
+                              \ close q delmark delm direct di echo ec edit ed
+                              \ filter fil function
+                              \ fu highlight hi kill local map mark
+                              \ m new op qa reload rel return ret sort sor
+                              \ source so syntax syn version ver vnew vne
 
 syn keyword navStatement        let local set
 
