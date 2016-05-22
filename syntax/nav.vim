@@ -25,8 +25,8 @@ syn case match
 syn match navNumber             "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-7]\+\>"
 syn match navFloat              "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
 syn match navVariable           /\w\+=/         display
-syn match navExpansion          /\${\=\w\+}\=/  display
-syn match navFieldVar           /%{\=\w\+}\=/   display
+syn match navVar                /\${\=\w\+}\=/  display
+syn match navSymbol             "%\w\+\%(:\w\+\)\="  display
 
 syn keyword navTodo             contained FIXME TODO XXX
 
@@ -68,8 +68,8 @@ syn keyword navOptions          BufSelActive BufSelInactive ComplSelected
                               \ OverlayLine OverlayBufNo OverlayInactiveBufNo
                               \ OverlayActive OverlayArgs OverlayInactive
                               \ OverlayTextInactive OverlayProgress
-                              \ OverlayFilter
-                              \ ComplText MsgError MsgMessage MsgAsk
+                              \ OverlayFilter ComplText ComplParam
+                              \ MsgError MsgMessage MsgAsk
 
 syn cluster navSubst            contains=navSubst,navOldSubst,navMathSubst
 syn region  navSubst            matchgroup=navSubstDelim transparent
@@ -101,8 +101,8 @@ hi def link navHereDoc          String
 hi def link navOperator         Constant
 hi def link navRedir            Operator
 hi def link navVariable         PreProc
-hi def link navFieldVar         PreProc
-hi def link navExpansion        PreProc
+hi def link navVar              PreProc
+hi def link navSymbol           Special
 hi def link navDereferencing    PreProc
 
 hi def link navCommands         Keyword
