@@ -26,7 +26,8 @@ syn match navNumber             "\<[0-9]\+\>\|\<0[xX][0-9a-fA-F]\+\>\|\<0[oO][0-
 syn match navFloat              "\<[0-9]\+\.[0-9]\+\([eE][-+]\=[0-9]\+\)\=\>"
 syn match navVariable           /\w\+=/         display
 syn match navVar                /\${\=\w\+}\=/  display
-syn match navSymbol             "%\w\+\%(:\w\+\)\="  display
+syn match navSymbol             /%{\=\w\+}\=/   display
+syn match navModule             "\w\+\s*::"
 
 syn keyword navTodo             contained FIXME TODO XXX
 
@@ -60,11 +61,12 @@ syn keyword navCommands         augroup aug autocmd au bdelete bd buffer bu cd
                               \ fu highlight hi kill local map mark
                               \ m new op qa reload rel return ret sort sor
                               \ source so syntax syn version ver vnew vne
+                              \ plug plugin
 
 syn keyword navStatement        let local set
 
 syn keyword navOptions          BufSelActive BufSelInactive ComplSelected
-                              \ BufText BufDir BufSz OverlaySep
+                              \ BufText BufDir BufSz BufStdout BufStderr OverlaySep
                               \ OverlayLine OverlayBufNo OverlayInactiveBufNo
                               \ OverlayActive OverlayArgs OverlayInactive
                               \ OverlayTextInactive OverlayProgress
@@ -97,12 +99,13 @@ hi def link navException        Exception
 hi def link navRepeat           Repeat
 hi def link navKeyword          Keyword
 hi def link navFunction         cFunc
+hi def link navModule           cFunc
 hi def link navHereDoc          String
 hi def link navOperator         Constant
 hi def link navRedir            Operator
 hi def link navVariable         PreProc
 hi def link navVar              PreProc
-hi def link navSymbol           Special
+hi def link navSymbol           Identifier
 hi def link navDereferencing    PreProc
 
 hi def link navCommands         Keyword
