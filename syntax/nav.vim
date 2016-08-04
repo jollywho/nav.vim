@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: nav configuration file
 " Maintainer: Kevin Vollmer
-" Last Change: 26-03-16
+" Last Change: 04-08-2016
 " License: This file is placed in the public domain.
 
 if version < 600
@@ -57,17 +57,17 @@ syn match navOperator           '||\|&&\|;\|&!\='
 
 syn keyword navCommands         augroup aug autocmd au bdelete bd buffer bu cd
                               \ close q delmark delm direct di echo ec edit ed
-                              \ filter fil function
-                              \ fu highlight hi kill local map mark
-                              \ m new op qa reload rel return ret sort sor
+                              \ filter fil function doautocmd doau
+                              \ fu highlight hi kill map mark
+                              \ m new opcmd op qa reload rel return ret sort sor
                               \ source so syntax syn version ver vnew vne
-                              \ plug plugin
+                              \ plug plugin table tbl
 
-syn keyword navStatement        let local set
+syn keyword navStatement        let set
 
 syn keyword navOptions          BufSelActive BufSelInactive ComplSelected
                               \ BufText BufDir BufSz BufStdout BufStderr OverlaySep
-                              \ OverlayLine OverlayBufNo OverlayInactiveBufNo
+                              \ OverlayLine OverlayBufNo
                               \ OverlayActive OverlayArgs OverlayInactive
                               \ OverlayTextInactive OverlayProgress
                               \ OverlayFilter ComplText ComplParam
