@@ -65,7 +65,12 @@ syn keyword navCommands         augroup aug autocmd au bdelete bd buffer bu cd
 
 syn keyword navStatement        let set
 
-syn keyword navOptions          BufSelActive BufSelInactive ComplSelected
+syn keyword navOptsSet          history jumplist menu_rows hintkeys shell sepchar
+                              \ sort sortinherit sortreverse askdelete askrename
+                              \ copy-pipe
+
+
+syn keyword navGroups           BufSelActive BufSelInactive ComplSelected
                               \ BufText BufDir BufSz BufStdout BufStderr OverlaySep
                               \ OverlayLine OverlayBufNo
                               \ OverlayActive OverlayArgs OverlayInactive
@@ -109,7 +114,8 @@ hi def link navSymbol           Identifier
 hi def link navDereferencing    PreProc
 
 hi def link navCommands         Keyword
-hi def link navOptions          Type
+hi def link navGroups           Type
+hi def link navOptsSet          Keyword
 hi def link navStatement        Keyword
 hi def link navSwitches         Special
 hi def link navNumber           Number
